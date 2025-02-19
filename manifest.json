@@ -1,32 +1,37 @@
 {
-    "manifest_version": 3,
-    "name": "Internshala Invitation Automator",
-    "version": "1.0",
-    "description": "Automates the process of inviting candidates on Internshala",
-    "permissions": [
-      "activeTab",
-      "scripting",
-      "storage"
-    ],
-    "host_permissions": [
-      "https://*.internshala.com/*"
-    ],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon.png"
-      }
-    },
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://*.internshala.com/*"],
-        "js": ["content.js"]
-      }
-    ],
-    "icons": {
-      "16": "icon.png"
+  "manifest_version": 3,
+  "name": "Internshala Invitation Automator",
+  "version": "1.0",
+  "description": "Automates the process of inviting candidates on Internshala",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.internshala.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
     }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.internshala.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   }
+}
